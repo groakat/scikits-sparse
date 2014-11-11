@@ -71,10 +71,11 @@ if __name__ == "__main__":
               Extension("scikits.sparse.cholmod",
                         ["scikits/sparse/cholmod.pyx"],
                         libraries=["cholmod"],
-                        include_dirs=[np.get_include()],
+                        include_dirs=[np.get_include(),
+                                      "/usr/local/include"],
                         # If your CHOLMOD is in a funny place, you may need to
                         # add something like this:
-                        #library_dirs=["/opt/suitesparse/lib"],
+                        library_dirs=["/usr/local/lib"],
                         # And modify include_dirs above in a similar way.
                         ),
               ],
